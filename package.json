@@ -1,0 +1,20 @@
+{
+  "name": "videoplot",
+  "version": "1.0.0",
+  "description": "plot inside a video",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "xo && vows test/*"
+  },
+  "author": "Pierre Colle <piercus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bezier": "^0.1.0",
+    "chart.js": "^2.7.1",
+    "chartjs-node": "^1.6.0",
+    "tmp": "0.0.33"
+  }
+}
