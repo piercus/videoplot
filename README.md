@@ -12,7 +12,7 @@ npm install videoplot
 
 ## Usage
 
-```
+```js
 const Videoplot = require('videoplot');
 
 var plot = new Videoplot({ w:600, h:600 });
