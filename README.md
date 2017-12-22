@@ -5,8 +5,10 @@ npm install videoplot
 ```
 
 ## Example
+| First example | Second example |
+|---|---|
+|![Example video](./examples/example.gif)| ![Example video](./examples/example2.gif)|
 
-![Example video](./examples/example.gif)
 
 ## Usage
 
