@@ -9,6 +9,10 @@
   "scripts": {
     "test": "xo && vows test/*"
   },
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/piercus/videoplot.git"
+	},
   "author": "Pierre Colle <piercus@gmail.com>",
   "license": "MIT",
   "dependencies": {
