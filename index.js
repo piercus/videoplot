@@ -162,7 +162,18 @@ class Videoplot {
 		return Promise.all(this.charts.map((ch, index) => {
 			return ch.writeImageToFile('image/png', tmpDir.name + '/img'+("0000" + index).slice(-5)+'.png')
 		})).then(() => {
-			return ffmpeg(tmpDir.name+'/img%05d.png').inputOption('-r '+this.fps).outputOption('-r '+this.fps).save(filename);
+			return new Promise((resolve, reject) => {
+				ffmpeg(tmpDir.name+'/img%05d.png')
+					.inputOption('-r '+this.fps)
+					.outputOption('-r '+this.fps)
+					.output(filename)
+					.on('error', (err)=>{
+						console.log("err videoplot", err);
+						reject(err)
+					})
+					.on('end', resolve)
+					.run();
+			})
 		})
 	}
 }
