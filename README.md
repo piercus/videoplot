@@ -15,31 +15,30 @@ npm install videoplot
 ```js
 const Videoplot = require('videoplot');
 
-var plot = new Videoplot({ w:600, h:600 });
-const duration = 10;
-const fps = 10;
-const xLabels = [];
-const data = [];
+var plot = new Videoplot({ w:600, h:600, duration: 30, fps: 8 });
+
+// create random data
 const y = [];
-for(var i = 0; i< duration; i++){
-	xLabels.push(i/fps);
+for(var i = 0; i< 10; i++){
 	y.push(Math.random());
 }
+
+// chartjs dataset format
+
 const datasets = [];
 datasets.push({
 	label : "graph",
 	borderColor: "#FFFFFF",
 	backgroundColor: "#888888",
 	fill: false,
-	data: y
+	data : y
 });
+
+// chartjs dataset format
 return plot.drawVideoChart({
 		type: 'line',
-		fps: 8,
 		wScale: 4,
-		duration: 30,
 		data: {
-			labels : xLabels,
 			datasets : datasets
 		},
 		options: {
@@ -65,12 +64,26 @@ return plot.drawVideoChart({
 		}
 })
 .then(() => {
-    // chart is created
-		return plot.writeVideoToFile('video/mp4', './examples/example.gif');
-    //return plot.getVideoStream('image/gif');
+	console.log("Chart is created");
+	// chart is created
+	return plot.writeVideoToFile({filename: './examples/example.gif'});
+	//return plot.getVideoStream('image/gif');
 })
+.catch(e => {
+	console.log("Error : ", e)
+})
+.then(() => {
+	console.log("Chart is saved into ./examples/example.gif");
+})
+
 ```
+
+## TO DO
+
+* better x scale management (labels ...)
+* more chartjs options handling
+* video output handling
 
 ## Thanks
 
-thanks to fluent-ffmpeg and
+thanks to [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) and [chartjs-node](https://www.npmjs.com/package/chartjs-node)

@@ -22,5 +22,8 @@
     "chartjs-node": "^1.6.0",
     "fluent-ffmpeg": "^2.1.2",
     "tmp": "0.0.33"
+  },
+  "devDependencies": {
+    "xo": "^0.18.2"
   }
 }

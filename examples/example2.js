@@ -1,11 +1,9 @@
 const Videoplot = require('../index.js');
 
-var plot = new Videoplot({ w:600, h:600 });
+var plot = new Videoplot({ w:600, h:600, duration: 30, fps: 8 });
 
-const xLabels = [];
 const y = [];
 for(var i = 0; i< 30; i++){
-	xLabels.push(i);
 	y.push(Math.random());
 }
 const datasets = [];
@@ -18,11 +16,8 @@ datasets.push({
 });
 return plot.drawVideoChart({
 		type: 'line',
-		fps: 8,
 		wScale: 2,
-		duration: 30,
 		data: {
-			labels : xLabels,
 			datasets : datasets
 		},
 		options: {
@@ -49,6 +44,6 @@ return plot.drawVideoChart({
 })
 .then(() => {
     // chart is created
-		return plot.writeVideoToFile('video/mp4', './examples/example2.gif');
+		return plot.writeVideoToFile({ filename : './examples/example2.gif'});
     //return plot.getVideoStream('image/gif');
 })
