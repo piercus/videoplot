@@ -13,13 +13,13 @@ datasets.push({
 	label : "graph",
 	borderColor: "#FFFFFF",
 	backgroundColor: "#888888",
-	fill: false
+	fill: false,
+	data: y
 });
 return plot.drawVideoChart({
 		type: 'line',
 		fps: 8,
 		wScale: 2,
-		y: y,
 		duration: 30,
 		data: {
 			labels : xLabels,

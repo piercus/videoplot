@@ -1,17 +1,17 @@
-const ChartJs = require('chartjs-node');
+/*const ChartJs = require('chartjs-node');
 const ffmpeg = require('fluent-ffmpeg');
 const tmp = require('tmp');
 
-var bezier = require('bezier-curve');
 
 class Videoplot {
-	constructor({w, h, wScale}){
-		this.w =w;
+	constructor({w, h}){
+		this.w = w;
 		this.h = h;
-	}
+	}*/
 	/**
 	*
 	*/
+	/*
 	drawVideoChart(opts){
 		const duration = opts.duration;
 		const fps = opts.fps;
@@ -176,5 +176,5 @@ class Videoplot {
 			})
 		})
 	}
-}
-module.exports = Videoplot;
+}*/
+module.exports = require('./lib/videoplot.js');
