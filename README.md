@@ -35,7 +35,7 @@ datasets.push({
 });
 
 // chartjs dataset format
-return plot.drawVideoChart({
+plot.drawVideoChart({
 		type: 'line',
 		wScale: 4,
 		data: {
@@ -69,8 +69,8 @@ return plot.drawVideoChart({
 	return plot.writeVideoToFile({filename: './examples/example.gif'});
 	//return plot.getVideoStream('image/gif');
 })
-.catch(e => {
-	console.log("Error : ", e)
+.catch(err => {
+	console.error("Error : ", err)
 })
 .then(() => {
 	console.log("Chart is saved into ./examples/example.gif");
