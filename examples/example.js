@@ -2,10 +2,8 @@ const Videoplot = require('../index.js');
 
 var plot = new Videoplot({ w:600, h:600 });
 
-const xLabels = [];
 const y = [];
 for(var i = 0; i< 10; i++){
-	xLabels.push(i);
 	y.push(Math.random());
 }
 const datasets = [];
@@ -22,7 +20,6 @@ return plot.drawVideoChart({
 		wScale: 4,
 		duration: 30,
 		data: {
-			labels : xLabels,
 			datasets : datasets
 		},
 		options: {
@@ -46,6 +43,8 @@ return plot.drawVideoChart({
 				}],
 			}
 		}
+}).catch(e => {
+	console.log("error", e)
 })
 .then(() => {
     // chart is created
