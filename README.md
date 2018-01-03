@@ -21,7 +21,6 @@ npm install videoplot
 |---|---|
 |![Example video](./examples/example.gif)| ![Example video](./examples/example2.gif)|
 
-
 ## Usage
 
 ```js
