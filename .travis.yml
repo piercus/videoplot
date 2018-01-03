@@ -1,0 +1,9 @@
+language: node_js
+dist: trusty
+sudo: required
+before_install:
+  - sudo add-apt-repository ppa:jonathonf/ffmpeg-3 -y
+  - sudo apt-get update -q
+  - sudo apt update && sudo apt install ffmpeg libav-tools x264 x265 -y
+node_js:
+  - 6

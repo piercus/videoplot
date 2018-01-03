@@ -1,11 +1,23 @@
-## Videoplot
+<p align="center">
+  <a href="https://travis-ci.org/piercus/videoplot"><img src="https://img.shields.io/travis/piercus/videoplot/master.svg" alt="travis"></a>
+  <a href="https://www.npmjs.com/piercus/videoplot"><img src="https://img.shields.io/npm/v/videoplot.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/videoplot"><img src="https://img.shields.io/npm/dm/videoplot.svg" alt="npm downloads"></a>
+</p>
+
+## Install
+
+### Prerequisites
+
+Having ffmpeg installed on your computer see [fluent-ffmpeg prerequisites](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#prerequisites)
+
+### Npm installation
 
 ```bash
 npm install videoplot
 ```
 
 ## Example
-| First example | Second example |
+| First example (1 simple curve)| Second example (3 curves)|
 |---|---|
 |![Example video](./examples/example.gif)| ![Example video](./examples/example2.gif)|
 
@@ -78,6 +90,10 @@ plot.drawVideoChart({
 
 ```
 
+## Documentation
+
+Documentation is inside the code as JSDoc.
+
 ## TO DO
 
 * better x scale management (labels ...)
@@ -86,4 +102,4 @@ plot.drawVideoChart({
 
 ## Thanks
 
-thanks to [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) and [chartjs-node](https://www.npmjs.com/package/chartjs-node)
+Thanks to [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) and [chartjs-node](https://www.npmjs.com/package/chartjs-node)

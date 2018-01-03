@@ -1,15 +1,15 @@
 {
   "name": "videoplot",
-  "version": "1.1.2",
-  "description": "plot inside a video",
+  "version": "1.1.4",
+  "description": "Moving Chart inside a video with chartjs",
   "main": "index.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "test": "xo && vows test/*"
+    "test": "xo && node examples/example.js "
   },
-  "files": [ 
+  "files": [
     "lib",
     "index.js"
   ],
@@ -17,6 +17,22 @@
     "type": "git",
     "url": "git+https://github.com/piercus/videoplot.git"
   },
+  "keywords": [
+    "video",
+    "videos",
+    "dynamic",
+    "moving",
+    "plot",
+    "chart",
+    "charts",
+    "curve",
+    "graph",
+    "chartjs",
+    "ffmpeg",
+    "fluent-ffmpeg",
+    "visualization",
+    "data"
+  ],
   "author": "Pierre Colle <piercus@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -28,6 +44,7 @@
     "tmp": "0.0.33"
   },
   "devDependencies": {
+    "vows": "^0.8.1",
     "xo": "^0.18.2"
   }
 }

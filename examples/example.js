@@ -20,7 +20,7 @@ datasets.push({
 });
 
 // Chartjs dataset format
-plot.drawVideoChart({
+module.exports = plot.drawVideoChart({
 	type: 'line',
 	wScale: 4,
 	data: {
