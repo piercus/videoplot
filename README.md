@@ -10,6 +10,12 @@
 
 Having ffmpeg installed on your computer see [fluent-ffmpeg prerequisites](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#prerequisites)
 
+For ubuntu, you should also do 
+
+```bash
+sudo apt-get install libgif-dev
+```
+
 ### Npm installation
 
 ```bash
