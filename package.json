@@ -1,6 +1,6 @@
 {
   "name": "videoplot",
-  "version": "1.2.7",
+  "version": "2.0.0",
   "description": "Moving Chart inside a video with chartjs",
   "main": "index.js",
   "directories": {
