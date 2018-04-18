@@ -39,7 +39,7 @@
     "bezier": "^0.1.0",
     "bezier-curve": "^1.0.0",
     "bluebird": "^3.5.1",
-    "chart.js": "^2.7.1",
+    "chart.js": "^2.7.2",
     "chartjs-node": "^1.6.0",
     "fluent-ffmpeg": "^2.1.2",
     "tmp": "0.0.33"
