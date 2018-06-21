@@ -1,16 +1,26 @@
 const Videoplot = require('../index.js');
 
-const plot = new Videoplot({w: 600, h: 600, duration: 30, fps: 8});
+const winston = require('winston');
+
+const logger = new winston.Logger({
+	transports: [new winston.transports.Console({
+		level: 'debug'
+	})]
+});
+
+const duration = 8000;
+
+const plot = new Videoplot({w: 600, h: 600, duration, fps: 8, logger, logFreq: 10});
 
 const y1 = [];
 const y2 = [];
 const y3 = [];
 let y2current = 0.5;
 let y3current = 0.5;
-for (let i = 0; i < 30; i++) {
+for (let i = 0; i < duration; i++) {
 	y1.push(Math.random());
-	y2current += (Math.random() - 0.5) / 10;
-	y3current += (Math.random() - 0.5) / 5;
+	y2current += (Math.random() - 0.5 + 1) / 10;
+	y3current += (Math.random() - 0.5 + 1) / 5;
 	y2.push(y2current);
 	y3.push(y3current);
 }
