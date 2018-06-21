@@ -1,6 +1,5 @@
-const Videoplot = require('../index.js');
-
 const winston = require('winston');
+const Videoplot = require('../index.js');
 
 const logger = new winston.Logger({
 	transports: [new winston.transports.Console({

@@ -42,10 +42,13 @@
     "chart.js": "^2.7.2",
     "chartjs-node": "^1.6.0",
     "fluent-ffmpeg": "^2.1.2",
+    "gnu-plot": "^0.1.6",
+    "gnuplot": "^0.3.1",
     "tmp": "0.0.33"
   },
   "devDependencies": {
     "vows": "^0.8.1",
+    "winston": "^3.0.0",
     "xo": "^0.18.2"
   }
 }
